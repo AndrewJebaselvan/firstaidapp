@@ -1,0 +1,251 @@
+.topics-page {
+  min-height: 100vh;
+  background: #f5f2ec;
+  color: #171717;
+  padding-bottom: 80px;
+}
+
+.topics-hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 110px 40px 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+}
+
+.section-label,
+.error-label {
+  display: inline-block;
+  margin-bottom: 18px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.topics-hero h1 {
+  margin: 0;
+  font-size: clamp(48px, 6vw, 82px);
+  line-height: 0.95;
+  letter-spacing: -0.055em;
+  font-weight: 600;
+}
+
+.topics-count {
+  min-width: 110px;
+  text-align: right;
+}
+
+.topics-count span {
+  display: block;
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: -0.05em;
+}
+
+.topics-count p {
+  margin: 8px 0 0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.topics-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.topic-card {
+  position: relative;
+  min-height: 260px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #171717;
+  background: #ffffff;
+  border: 1px solid #e5e0d8;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.topic-card:hover {
+  transform: translateY(-5px);
+  background: #171717;
+  color: #ffffff;
+}
+
+.topic-card-number {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.topic-card-content {
+  padding-right: 45px;
+}
+
+.topic-card-content h2 {
+  margin: 0 0 12px;
+  font-size: 30px;
+  line-height: 1;
+  letter-spacing: -0.035em;
+}
+
+.topic-card-content p {
+  max-width: 470px;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.65;
+  opacity: 0.7;
+}
+
+.topic-card-arrow {
+  position: absolute;
+  right: 28px;
+  bottom: 25px;
+  font-size: 28px;
+  transition: transform 0.25s ease;
+}
+
+.topic-card:hover .topic-card-arrow {
+  transform: translateX(6px);
+}
+
+.topics-cta {
+  max-width: 1200px;
+  margin: 90px auto 0;
+  padding: 55px 40px;
+  background: #171717;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.topics-cta h2 {
+  margin: 0;
+  font-size: clamp(38px, 5vw, 62px);
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+  font-weight: 500;
+}
+
+.topics-quiz-button,
+.topics-retry-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 22px;
+  border: 1px solid #ffffff;
+  background: #ffffff;
+  color: #171717;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.topics-quiz-button:hover,
+.topics-retry-button:hover {
+  background: transparent;
+  color: #ffffff;
+}
+
+.topics-loading,
+.topics-error,
+.topics-empty {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 160px 40px;
+  text-align: center;
+}
+
+.topics-loading p {
+  margin-top: 20px;
+  font-size: 15px;
+  opacity: 0.65;
+}
+
+.loading-spinner {
+  width: 42px;
+  height: 42px;
+  margin: 0 auto;
+  border: 3px solid #d8d2c9;
+  border-top-color: #171717;
+  border-radius: 50%;
+  animation: spinner 0.8s linear infinite;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.topics-error h1 {
+  margin: 0 0 15px;
+  font-size: 48px;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.topics-error p {
+  margin: 0 auto 28px;
+  max-width: 500px;
+  line-height: 1.6;
+  opacity: 0.65;
+}
+
+.topics-retry-button {
+  border-color: #171717;
+  background: #171717;
+  color: #ffffff;
+}
+
+.topics-retry-button:hover {
+  background: transparent;
+  color: #171717;
+}
+
+.topics-empty h2 {
+  margin-bottom: 10px;
+}
+
+.topics-empty p {
+  margin: 0;
+  opacity: 0.65;
+}
+
+@media (max-width: 800px) {
+  .topics-hero {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .topics-count {
+    text-align: left;
+  }
+
+  .topics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .topics-cta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

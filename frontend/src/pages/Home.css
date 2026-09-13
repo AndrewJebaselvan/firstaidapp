@@ -1,0 +1,606 @@
+.home {
+  min-height: 100vh;
+  background: #f8f8f6;
+  color: #111;
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+  position: relative;
+  min-height: calc(100vh - 90px);
+  padding: 70px 6% 90px;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 70px;
+  overflow: hidden;
+}
+
+
+.hero-content {
+  max-width: 760px;
+}
+
+
+.hero-label {
+  margin: 0 0 26px;
+  color: #777;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+
+.hero h1 {
+  margin: 0;
+  max-width: 900px;
+  font-size: clamp(4rem, 8vw, 8rem);
+  line-height: 0.87;
+  letter-spacing: -0.075em;
+  font-weight: 600;
+}
+
+
+.hero-description {
+  max-width: 610px;
+  margin: 35px 0 30px;
+  color: #666;
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+
+.primary-button,
+.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 15px 23px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.92rem;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.primary-button {
+  background: #111;
+  color: white;
+}
+
+
+.secondary-button {
+  border: 1px solid #d8d8d3;
+  background: transparent;
+  color: #111;
+}
+
+
+.primary-button:hover,
+.secondary-button:hover {
+  transform: translateY(-3px);
+}
+
+
+.hero-meta {
+  max-width: 650px;
+  margin-top: 60px;
+  padding-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid #deded9;
+  gap: 20px;
+}
+
+
+.hero-meta div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+
+.hero-meta strong {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+
+.hero-meta span {
+  color: #888;
+  font-size: 0.72rem;
+  line-height: 1.4;
+}
+
+
+/* ================================
+   HERO VISUAL
+================================ */
+
+.hero-visual {
+  position: relative;
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.hero-main-shape {
+  position: relative;
+  width: min(470px, 75vw);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #e7e7e2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+
+.hero-main-shape::before {
+  content: '';
+  position: absolute;
+  width: 68%;
+  height: 68%;
+  border-radius: 50%;
+  border: 1px solid #c8c8c2;
+}
+
+
+.hero-main-shape::after {
+  content: '';
+  position: absolute;
+  width: 82%;
+  height: 82%;
+  border-radius: 50%;
+  border: 1px dashed #d0d0ca;
+}
+
+
+.hero-cross {
+  position: relative;
+  z-index: 2;
+  width: 120px;
+  height: 120px;
+}
+
+
+.hero-cross span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: #111;
+  border-radius: 5px;
+  transform: translate(-50%, -50%);
+}
+
+
+.hero-cross span:first-child {
+  width: 120px;
+  height: 34px;
+}
+
+
+.hero-cross span:last-child {
+  width: 34px;
+  height: 120px;
+}
+
+
+.hero-shape-text {
+  position: absolute;
+  z-index: 3;
+  bottom: 82px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #666;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+
+/* ================================
+   ORBITS
+================================ */
+
+.hero-orbit {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid #deded9;
+  pointer-events: none;
+}
+
+
+.hero-orbit-one {
+  width: 560px;
+  height: 560px;
+}
+
+
+.hero-orbit-two {
+  width: 660px;
+  height: 660px;
+  border-style: dashed;
+}
+
+
+/* ================================
+   FLOATING CARDS
+================================ */
+
+.hero-floating-card {
+  position: absolute;
+  z-index: 5;
+  width: 185px;
+  padding: 21px;
+  background: white;
+  border: 1px solid #e1e1dc;
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.09);
+}
+
+
+.hero-floating-card-top {
+  top: 9%;
+  right: 0;
+}
+
+
+.hero-floating-card-bottom {
+  left: 2%;
+  bottom: 8%;
+}
+
+
+.floating-label {
+  display: block;
+  margin-bottom: 12px;
+  color: #888;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+
+.hero-floating-card strong {
+  color: #222;
+  font-size: 1.05rem;
+  line-height: 1.35;
+}
+
+
+/* ================================
+   INTRO
+================================ */
+
+.home-intro {
+  padding: 125px 6%;
+  display: grid;
+  grid-template-columns: 0.3fr 1fr;
+  gap: 40px;
+  background: #111;
+  color: white;
+}
+
+
+.home-intro .section-label {
+  color: #888;
+}
+
+
+.home-intro-content {
+  max-width: 1100px;
+}
+
+
+.home-intro h2 {
+  margin: 0;
+  font-size: clamp(3rem, 5.5vw, 6rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+  font-weight: 500;
+}
+
+
+.home-intro-content p {
+  max-width: 580px;
+  margin: 35px 0 0;
+  color: #aaa;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+
+/* ================================
+   EMERGENCY SECTION
+================================ */
+
+.emergency-section {
+  padding: 125px 6%;
+  background: #f8f8f6;
+}
+
+
+.emergency-heading {
+  max-width: 1200px;
+  margin: 0 auto 65px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  align-items: end;
+}
+
+
+.emergency-heading h2 {
+  margin: 0;
+  font-size: clamp(3rem, 6vw, 6rem);
+  line-height: 0.92;
+  letter-spacing: -0.06em;
+  font-weight: 500;
+}
+
+
+.emergency-heading > p {
+  max-width: 500px;
+  margin: 0;
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+
+.emergency-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+
+.emergency-card {
+  min-height: 370px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: white;
+  border: 1px solid #e2e2dd;
+}
+
+
+.emergency-card-dark {
+  background: #111;
+  border-color: #111;
+  color: white;
+}
+
+
+.emergency-number {
+  color: #999;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+
+.emergency-card-dark .emergency-number {
+  color: #777;
+}
+
+
+.emergency-card-content h3 {
+  margin: 0 0 18px;
+  font-size: 2rem;
+  letter-spacing: -0.04em;
+}
+
+
+.emergency-card-content p {
+  margin: 0;
+  max-width: 380px;
+  color: #666;
+  line-height: 1.65;
+}
+
+
+.emergency-card-dark p {
+  color: #aaa;
+}
+
+
+.emergency-call-button {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin-top: 28px;
+  padding: 11px 18px;
+  border-radius: 999px;
+  background: #111;
+  color: white;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+
+.emergency-call-button:hover {
+  transform: translateY(-2px);
+}
+
+
+/* ================================
+   BOTTOM CTA
+================================ */
+
+.home-cta {
+  padding: 115px 6%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 50px;
+  background: #e7e7e2;
+}
+
+
+.home-cta h2 {
+  margin: 0;
+  font-size: clamp(3rem, 6vw, 6rem);
+  line-height: 0.93;
+  letter-spacing: -0.06em;
+  font-weight: 500;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1050px) {
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+
+  .hero-visual {
+    min-height: 520px;
+  }
+
+
+  .hero-floating-card-top {
+    right: 8%;
+  }
+
+
+  .hero-floating-card-bottom {
+    left: 8%;
+  }
+
+
+  .home-intro {
+    grid-template-columns: 1fr;
+  }
+
+
+  .emergency-heading {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 850px) {
+
+  .emergency-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .home-cta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+}
+
+
+@media (max-width: 650px) {
+
+  .hero {
+    padding: 55px 5% 75px;
+  }
+
+
+  .hero h1 {
+    font-size: clamp(3.3rem, 15vw, 5.2rem);
+  }
+
+
+  .hero-meta {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+
+  .hero-visual {
+    min-height: 420px;
+  }
+
+
+  .hero-main-shape {
+    width: 300px;
+  }
+
+
+  .hero-orbit-one {
+    width: 350px;
+    height: 350px;
+  }
+
+
+  .hero-orbit-two {
+    width: 420px;
+    height: 420px;
+  }
+
+
+  .hero-floating-card {
+    width: 145px;
+    padding: 16px;
+  }
+
+
+  .hero-floating-card-top {
+    top: 4%;
+    right: 0;
+  }
+
+
+  .hero-floating-card-bottom {
+    left: 0;
+    bottom: 4%;
+  }
+
+
+  .home-intro,
+  .emergency-section,
+  .home-cta {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+
+  .home-intro {
+    padding-top: 85px;
+    padding-bottom: 85px;
+  }
+
+
+  .emergency-section {
+    padding-top: 85px;
+    padding-bottom: 85px;
+  }
+
+
+  .home-cta {
+    padding-top: 85px;
+    padding-bottom: 85px;
+  }
+
+}
